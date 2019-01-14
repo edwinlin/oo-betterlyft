@@ -27,8 +27,8 @@ class Driver
 
 	def passenger_names
 		rides.map do |ride|
-			ride.passenger
-		end
+			ride.passenger.name
+		end.uniq
 	end
 
 	def self.mileage_cap(distance)
